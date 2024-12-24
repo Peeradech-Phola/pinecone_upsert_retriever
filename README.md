@@ -14,7 +14,6 @@ Ensure the following tools and libraries are installed:
    - `PINECONE_API_KEY`: Your Pinecone API key.
    - `PINECONE_INDEX_NAME`: The name of your Pinecone index.
    - `NAMESPACE`: The namespace to query in Pinecone.
-4. **Thai Font**: Download and install the `THSarabunNew.ttf` font file.
 
 ---
 
