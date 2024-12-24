@@ -1,0 +1,8 @@
+random
+fitz
+pythainlp
+pinecone-client
+python-dotenv
+reportlab
+openpyxl
+pandas
