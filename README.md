@@ -1,24 +1,32 @@
-# Pinecone Data Processing and Export Project
+---
 
-This project demonstrates the integration of Python with Pinecone for data processing, exporting results to Excel, CSV, and PDF, and handling Thai text with Thai font support. Below are the steps to set up and run the project.
+# Pinecone Data Processing and Export Project 🚀
+
+This project integrates Python with **Pinecone** for efficient data processing, supports exporting results to **Excel**, **CSV**, and **PDF**, and ensures compatibility with **Thai text** through Thai font integration.
+
+## ✨ Features
+
+- Retrieve and export Pinecone data to Excel, CSV, and PDF formats.
+- Handle Thai text seamlessly with custom font support.
+- Upsert data from PDF documents into Pinecone with normalization.
 
 ---
 
-## Prerequisites
+## 🛠 Prerequisites
 
-Ensure the following tools and libraries are installed:
+Before you begin, ensure you have the following:
 
-1. **Python**: Version 3.8 or higher.
-2. **Pip**: Python package manager.
-3. **Environment Variables**:
-   - `PINECONE_API_KEY`: Your Pinecone API key.
-   - `PINECONE_INDEX_NAME`: The name of your Pinecone index.
-   - `NAMESPACE`: The namespace to query in Pinecone.
-   - `PINECONE_ENVIRONMENT`: ENVIRONMENT index Pinecone.
+- **Python**: Version 3.8 or higher.
+- **Pip**: Python package manager.
+- **Environment Variables**:
+  - `PINECONE_API_KEY`: Your Pinecone API key.
+  - `PINECONE_INDEX_NAME`: The Pinecone index name.
+  - `NAMESPACE`: Namespace to query in Pinecone.
+  - `PINECONE_ENVIRONMENT`: The Pinecone environment.
 
 ---
 
-## Installation
+## 🚀 Getting Started
 
 ### 1. Clone the Repository
 
@@ -29,7 +37,7 @@ cd <repository_name>
 
 ### 2. Install Dependencies
 
-Use the `requirements.txt` file to install the necessary libraries:
+Install all required packages using the `requirements.txt` file:
 
 ```bash
 pip install -r requirements.txt
@@ -37,11 +45,11 @@ pip install -r requirements.txt
 
 ---
 
-## Configuration
+## ⚙️ Configuration
 
 ### 1. Set Up Environment Variables
 
-Create a `.env` file in the root directory with the following content:
+Create a `.env` file in the project root directory with the following content:
 
 ```env
 PINECONE_API_KEY=your_api_key
@@ -50,55 +58,79 @@ NAMESPACE=your_namespace
 PINECONE_ENVIRONMENT=your_environment
 ```
 
-### 2. Place Thai Font File
+### 2. Add Thai Font File
 
-Ensure the `THSarabunNew.ttf` file is placed in the root directory of the project.
+Place the `THSarabunNew.ttf` font file in the project root directory for Thai text support in PDF exports.
 
 ---
 
-## Usage
+## 📖 Usage
 
-### 1. Retrieve Data from Pinecone and Export to Excel/CSV
+### 1. Export Data to Excel and CSV 📊
 
-Run the script to fetch data from Pinecone and export it to Excel and CSV files:
+Run the script to fetch data from Pinecone and export it as `.xlsx` and `.csv` files:
 
 ```bash
 python retriever_xlsx_csv.py
 ```
 
-This will generate the files `output.xlsx` and `output.csv` in the specified output path.
+Output files will be saved as `output.xlsx` and `output.csv`.
 
-### 2. Retrieve Data from Pinecone and Export to PDF
+---
 
-Run the script to fetch data from Pinecone and export it to a PDF file:
+### 2. Export Data to PDF 📄
+
+Generate a PDF file from Pinecone data with Thai font integration:
 
 ```bash
 python retriever_pdf.py
 ```
 
-This will generate a PDF file (`output.pdf`) in the specified output path.
+The PDF output will be saved as `output.pdf`.
 
-### 3. Upsert a PDF Document into Pinecone
+---
 
-To index a PDF document, place the file in the desired directory and run:
+### 3. Upsert PDF Data into Pinecone 📥
+
+Index a PDF document into Pinecone by running:
 
 ```bash
 python upsert_pdf.py
 ```
 
-This script will extract text from the PDF, normalize Thai text, and upload it to the specified Pinecone index.
+This will extract and normalize Thai text before uploading it to your specified Pinecone index.
 
 ---
 
-## Key Scripts
+## 📜 Key Scripts
 
-1. **`retriever_xlsx_csv.py`**:
-   - Fetches data from Pinecone and exports it to Excel and CSV files.
-
-2. **`retriever_pdf.py`**:
-   - Fetches data from Pinecone and exports it to a PDF file with Thai font support.
-
-3. **`upsert_pdf.py`**:
-   - Reads a PDF document, processes the text, and uploads it to Pinecone.
+| Script Name               | Description                                           |
+|---------------------------|-------------------------------------------------------|
+| `retriever_xlsx_csv.py`   | Fetches Pinecone data and exports it to Excel/CSV.    |
+| `retriever_pdf.py`        | Fetches Pinecone data and exports it to a PDF file.   |
+| `upsert_pdf.py`           | Reads and indexes a PDF document into Pinecone.       |
 
 ---
+
+## 📦 Project Structure
+
+```plaintext
+📂 Project Root
+├── 📂 PDF
+│   ├── retriever_pdf.py    # Script to export data to PDF
+│   ├── upsert_pdf.py       # Script to upsert data from a PDF
+│   ├── THSarabunNew.ttf    # Thai font file
+├── 📂 XLSX_CSV
+│   ├── retriever_xlsx_csv.py   # Script to export data to Excel/CSV
+├── requirements.txt        # Dependencies file
+├── .env                    # Environment variables
+
+```
+
+---
+
+## 📝 License
+
+This project is licensed under the **MIT License**.
+
+generated by a tool `readme-md-generator`:
