@@ -1,6 +1,6 @@
 ---
 
-# Pinecone Data Processing and Export Project 🚀
+# Pinecone Upsert Retriever Project 🚀
 
 This project integrates Python with **Pinecone** for efficient data processing, supports exporting results to **Excel**, **CSV**, and **PDF**, and ensures compatibility with **Thai text** through Thai font integration.
 
